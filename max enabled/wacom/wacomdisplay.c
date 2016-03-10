@@ -16,10 +16,11 @@ map(
 		assign("/end/y", /partial/y * (j+1)),
 
 		assign("/gridnum/disp", i + 8*(7-j)),
-		assign("/isroot" , ((value("/gridnum/disp")%8) == 0)),
+		assign("/isroot" , ((value("/gridnum/disp")==0)||(value("/gridnum/disp")==7)||(value("/gridnum/disp")==12)||(value("/gridnum/disp")==17)||(value("/gridnum/disp")==29)||(value("/gridnum/disp")==34)||(value("/gridnum/disp")==46)||(value("/gridnum/disp")==51)||(value("/gridnum/disp")==56)||(value("/gridnum/disp")==63))),
+
 
 		if(/isroot,
-			assign("/draw/"+i+j , ["framerect",/start/x,/start/y,/end/x,/end/y,200,0,0]),
+			assign("/draw/"+i+j , ["paintrect",/start/x,/start/y,/end/x,/end/y,93,51,191]),
 			assign("/draw/"+i+j , ["framerect",/start/x,/start/y,/end/x,/end/y,0,0,0])
 		)
   ),
