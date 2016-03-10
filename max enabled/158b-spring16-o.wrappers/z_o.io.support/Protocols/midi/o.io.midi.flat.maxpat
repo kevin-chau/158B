@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 724.0, 263.0, 532.0, 608.0 ],
+		"rect" : [ 376.0, 181.0, 532.0, 608.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,32 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "FullPacket" ],
+					"patching_rect" : [ 189.0, 68.0, 111.0, 22.0 ],
+					"style" : "",
+					"text" : "o.route /portinfo"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "FullPacket" ],
+					"patching_rect" : [ 378.0, 236.0, 111.0, 22.0 ],
+					"style" : "",
+					"text" : "o.prepend /portinfo"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -897,7 +923,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 117.285706, 140.0, 79.0, 22.0 ],
+					"patching_rect" : [ 117.285706, 200.0, 79.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend port"
 				}
@@ -1061,8 +1087,8 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 50.0, 100.0, 150.0, 24.0 ],
-													"saved_bundle_data" : [  ],
-													"saved_bundle_length" : 0,
+													"saved_bundle_data" : [ 35, 98, 117, 110, 100, 108, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+													"saved_bundle_length" : 16,
 													"textcolor" : [ 0.188, 0.188, 0.188, 1.0 ]
 												}
 
@@ -1378,7 +1404,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 378.0, 243.599121, 91.0, 22.0 ],
+					"patching_rect" : [ 378.0, 199.599121, 91.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1402,7 +1428,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "FullPacket" ],
-					"patching_rect" : [ 117.285706, 98.929199, 175.0, 35.0 ],
+					"patching_rect" : [ 117.285706, 158.929199, 175.0, 35.0 ],
 					"style" : "",
 					"text" : "o.route /output/port/to/device /from/device/input/port"
 				}
@@ -1418,7 +1444,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 189.0, 54.0, 112.0, 22.0 ],
+					"patching_rect" : [ 189.0, 108.0, 112.0, 22.0 ],
 					"style" : "",
 					"text" : "t l l"
 				}
@@ -2537,7 +2563,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
@@ -2583,6 +2609,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-19", 7 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2597,6 +2632,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -2675,7 +2719,7 @@
 , 			{
 				"patchline" : 				{
 					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
-					"destination" : [ "obj-11", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-45", 0 ]

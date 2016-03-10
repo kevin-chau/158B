@@ -308,6 +308,12 @@ oscout (0, address, finger_x / rect[2]);
 	address = '/'+name+'/bang';
 	oscout (0, address, 'bang');
 " trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/finger_canvas/init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="force_init(OSC_ARGS)" script="init();
+decl c = getobject();
+
+decl str = 'reset';
+setattribute(Text, 'content', str);
+canvas_refresh(c);" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/finger_canvas/force_init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
 </WINDOW>
 <WINDOW class="Text" text="Text" x="643" y="35" width="254" height="48" id="1" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="last pont: id 9">
 <VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Text/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>

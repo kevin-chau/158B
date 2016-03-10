@@ -69,7 +69,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 154.0, 234.0, 30.0, 30.0 ],
+					"patching_rect" : [ 212.0, 237.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -111,7 +111,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-4", 0 ]
+					"source" : [ "obj-4", 1 ]
 				}
 
 			}
@@ -120,8 +120,8 @@
 					"destination" : [ "obj-3", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 221.5, 187.0, 251.5, 187.0, 251.5, 104.0, 221.5, 104.0 ],
-					"source" : [ "obj-4", 1 ]
+					"midpoints" : [ 163.5, 187.0, 124.5, 187.0, 124.5, 104.0, 221.5, 104.0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
