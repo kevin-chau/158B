@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 38.0, 79.0, 1368.0, 787.0 ],
+		"rect" : [ 402.0, -372.0, 1852.0, 967.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -37,6 +37,22 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontface" : 0,
+					"fontsize" : 10.0,
+					"id" : "obj-4",
+					"linecount" : 7,
+					"maxclass" : "o.display",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 705.0, 47.0, 150.0, 100.0 ],
+					"text" : "/f0 : 622.254,\n/harmonics : [0.25, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n/vibrato/depth : 0.,\n/erb : 11.4832",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "comment",
@@ -425,7 +441,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -459,7 +475,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 132.0, 43.0, 20.0 ],
+									"patching_rect" : [ 50.0, 132.0, 43.0, 22.0 ],
 									"style" : "",
 									"text" : "t l l"
 								}
@@ -473,7 +489,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "FullPacket" ],
-									"patching_rect" : [ 50.0, 103.0, 43.0, 20.0 ],
+									"patching_rect" : [ 50.0, 103.0, 43.0, 35.0 ],
 									"style" : "",
 									"text" : "o.union"
 								}
@@ -486,7 +502,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "FullPacket" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ],
 									"style" : ""
 								}
@@ -569,7 +585,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "FullPacket", "FullPacket" ],
 					"patching_rect" : [ 39.0, 84.0, 446.0, 166.0 ],
-					"text" : "/f0 ??= 0,\n/vibrato/depth ??= 0,\n/harmonics ??= nfill(16, 0.),\n\nif( bound(/harmonics),\n  if( length(/harmonics) < 16,\n      /harmonics = [ /harmonics, nfill( 16 - length(/harmonics), 0.) ],\n      /harmonics = /harmonics[[ aseq(0, length(/harmonics)-1) ]]\n  )\n),\n/harmonics /= sqrt(16.),\n/erb = (24.7 * ((4.37 * /f0 * 0.001) + 1)) * 0.125,\n/vibrato/depth *= /erb",
+					"text" : "/f0 ??= 0,\n/vibrato/depth ??= 0,\n/harmonics ??= nfill(16,0),\n\nif( bound(/harmonics),\n  if( length(/harmonics) < 16,\n      /harmonics = [ /harmonics, nfill( 16 - length(/harmonics), 0.) ],\n      /harmonics = /harmonics[[ aseq(0, length(/harmonics)-1) ]]\n  )\n),\n/harmonics /= sqrt(16.),\n/erb = (24.7 * ((4.37 * /f0 * 0.001) + 1)) * 0.125,\n/vibrato/depth *= /erb",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -2006,7 +2022,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "FullPacket" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 39.0, 6.0, 25.0, 25.0 ],
 					"style" : ""
 				}
@@ -2856,6 +2872,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-17", 0 ]
