@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 1,
-			"revision" : 0,
+			"minor" : 0,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 402.0, -372.0, 1852.0, 967.0 ],
+		"rect" : [ 34.0, 79.0, 1852.0, 967.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -41,13 +41,13 @@
 					"fontface" : 0,
 					"fontsize" : 10.0,
 					"id" : "obj-4",
-					"linecount" : 7,
+					"linecount" : 22,
 					"maxclass" : "o.display",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 705.0, 47.0, 150.0, 100.0 ],
-					"text" : "/f0 : 622.254,\n/harmonics : [0.25, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n/vibrato/depth : 0.,\n/erb : 11.4832",
+					"patching_rect" : [ 705.0, 47.0, 150.0, 270.0 ],
+					"text" : "/f0 : 77.7817,\n/grp/a/encoder/1 : 98,\n/vibrato/depth : 28.9587,\n/harmonics : [0.25, 0.125, 0.08325, 0.0625, 0.05, 0.0416665, 0.0357, 0.03125, 0.02775, 0.025, 0.22725, 0.0208325, 0., 0., 0., 0.],\n/random : [0.413757, 0.16249, 0.251504, 0.0941618, 0.714061, 0.762405, 0.794542, 0.925823, 0.485144, 0.188434, 0.105896, 0.291317, 0.470862, 0.710501, 0.820128, 0.755245],\n/nrand : 16,\n/erb : 4.13696",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -73,7 +73,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 95.0, 572.0, 36.0, 20.0 ],
+					"patching_rect" : [ 95.0, 548.0, 36.0, 20.0 ],
 					"style" : "",
 					"text" : "$1 30"
 				}
@@ -88,7 +88,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 95.0, 600.0, 34.0, 20.0 ],
+					"patching_rect" : [ 95.0, 576.0, 34.0, 20.0 ],
 					"style" : "",
 					"text" : "line~"
 				}
@@ -103,7 +103,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 39.0, 630.0, 44.0, 20.0 ],
+					"patching_rect" : [ 39.0, 606.0, 44.0, 20.0 ],
 					"style" : "",
 					"text" : "*~ 0."
 				}
@@ -120,13 +120,13 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 1,
-							"revision" : 0,
+							"minor" : 0,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 469.0, 109.0, 725.0, 691.0 ],
+						"rect" : [ 556.0, 221.0, 725.0, 691.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -153,7 +153,23 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontface" : 0,
+									"fontsize" : 12.0,
+									"id" : "obj-1",
+									"maxclass" : "o.display",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 363.0, 119.0, 150.0, 34.0 ],
+									"text" : "/depth : 28.9587",
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-3",
 									"maxclass" : "newobj",
@@ -190,20 +206,6 @@
 									"patching_rect" : [ 123.0, 253.0, 112.0, 22.0 ],
 									"style" : "",
 									"text" : "o.route /rate /depth"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"format" : 6,
-									"id" : "obj-9",
-									"maxclass" : "flonum",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "bang" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 123.0, 283.0, 50.0, 22.0 ],
-									"style" : ""
 								}
 
 							}
@@ -355,7 +357,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-9", 0 ],
+									"destination" : [ "obj-82", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-38", 0 ]
@@ -368,6 +370,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-39", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-43", 0 ]
 								}
 
 							}
@@ -395,15 +406,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-83", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-82", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-9", 0 ]
 								}
 
 							}
@@ -435,8 +437,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 1,
-							"revision" : 0,
+							"minor" : 0,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -502,7 +504,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "FullPacket" ],
 									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ],
 									"style" : ""
 								}
@@ -1949,7 +1951,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 39.0, 564.0, 47.0, 20.0 ],
+					"patching_rect" : [ 39.0, 540.0, 47.0, 20.0 ],
 					"style" : "",
 					"text" : "phasor~"
 				}
@@ -2022,7 +2024,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "FullPacket" ],
 					"patching_rect" : [ 39.0, 6.0, 25.0, 25.0 ],
 					"style" : ""
 				}
@@ -2052,7 +2054,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 39.0, 532.0, 32.5, 20.0 ],
+					"patching_rect" : [ 39.0, 508.0, 32.5, 20.0 ],
 					"style" : "",
 					"text" : "*~ 1."
 				}
@@ -2067,7 +2069,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 39.0, 596.0, 32.0, 20.0 ],
+					"patching_rect" : [ 39.0, 572.0, 32.0, 20.0 ],
 					"style" : "",
 					"text" : "cos~"
 				}
