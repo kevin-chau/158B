@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 3,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -37,22 +37,6 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"fontface" : 0,
-					"fontsize" : 10.0,
-					"id" : "obj-4",
-					"linecount" : 22,
-					"maxclass" : "o.display",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 705.0, 47.0, 150.0, 270.0 ],
-					"text" : "/f0 : 77.7817,\n/grp/a/encoder/1 : 98,\n/vibrato/depth : 28.9587,\n/harmonics : [0.25, 0.125, 0.08325, 0.0625, 0.05, 0.0416665, 0.0357, 0.03125, 0.02775, 0.025, 0.22725, 0.0208325, 0., 0., 0., 0.],\n/random : [0.413757, 0.16249, 0.251504, 0.0941618, 0.714061, 0.762405, 0.794542, 0.925823, 0.485144, 0.188434, 0.105896, 0.291317, 0.470862, 0.710501, 0.820128, 0.755245],\n/nrand : 16,\n/erb : 4.13696",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "comment",
@@ -122,7 +106,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 3,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -153,18 +137,18 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontface" : 0,
 									"fontsize" : 12.0,
 									"id" : "obj-1",
+									"linecount" : 2,
 									"maxclass" : "o.display",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 363.0, 119.0, 150.0, 34.0 ],
-									"text" : "/depth : 28.9587",
+									"patching_rect" : [ 363.0, 119.0, 150.0, 48.0 ],
+									"text" : "/depth : 0.48622,\n/rate : 0.472441",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 
@@ -439,7 +423,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 3,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2874,15 +2858,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-17", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-17", 0 ]
